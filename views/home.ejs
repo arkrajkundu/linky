@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/home_styles.css">
+  <title>Home Page</title>
+</head>
+<body>
+  <h1><span>Linky:</span> A free-to-use URL shortener!</h1>
+  <div>
+    <form class="homepage-form" method="post" action="/url">
+      <input type="text" name="url" placeholder="🔗 Enter URL starting with https://" required>
+      <button type="submit">Generate!</button>
+    </form>
+  </div>
+  <% if (locals.id) { %>
+    <div class="gen-url">
+      <p class="url-generated">URL Generated: <a href="http://<%= locals.host %>:<%= locals.port %>/url/<%= id %>" target="_blank">http://<%= locals.host %>:<%= locals.port %>/url/<%= id %></a></p>
+    </div>
+   <% } %>
+  
+    <% if (locals.urls) { %>
+      <div class="home-table-container">
+     <table class="home-table">
+      <thead class="table-head">
+        <th>S. No.</th>
+        <th>ShortIDs</th>
+        <th>Redirect</th>
+        <th>Clicks</th>
+      </thead>
+      <tbody class="table-body">
+        <% urls.forEach((url, index) => { %>
+          <tr>
+         <td class="td1"><%= index + 1 %></td>
+         <td class="td2"><a target="_blank" href="http://<%= locals.host %>:<%= locals.port %>/url/<%= url.shortID %>"><%= url.shortID %></a></td>
+         <td class="td3"><a target="_blank" href="<%= url.redirectURL %>"><%= url.redirectURL %></a></td>
+         <td class="td4"><%= url.visitHistory.length %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+     </table>
+    <% } %>
+  </div>
+</body>
+</html>

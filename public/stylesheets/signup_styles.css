@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/images/background.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid black;
+}
+
+.signup-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup-form input,
+.signup-form button {
+  margin: 10px 0;
+  width: 80%;
+  padding: 15px;
+  border-radius: 25px;
+  border: 1px solid black;
+}
+
+.signup-form input {
+  background-color: transparent;
+}
+
+.signup-form input::placeholder {
+  color: black;
+}
+
+.signup-form button {
+  background-color: white;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background-color: rgba(175, 110, 245, 0.1);
+}
+
+.signup-form button:active {
+  background-color: white;
+}
+
+.signup-container p {
+  margin-top: 10px;
+  color: black;
+}
+
+.signup-container p span {
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(119, 0, 255);
+}
+
+.signup-container p a {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .signup-container {
+    padding: 15px;
+  }
+
+  .signup-form input,
+  .signup-form button {
+    padding: 10px;
+  }
+}
