@@ -16,7 +16,7 @@
   </div>
   <% if (locals.id) { %>
     <div class="gen-url">
-      <p class="url-generated">URL Generated: <a href="https://<%= locals.host %>:<%= locals.port %>/url/<%= id %>" target="_blank">https://<%= locals.host %>:<%= locals.port %>/url/<%= id %></a></p>
+      <p class="url-generated">URL Generated: <a href="https://<%= locals.host %>/url/<%= id %>" target="_blank">https://<%= locals.host %>/url/<%= id %></a></p>
     </div>
    <% } %>
   
@@ -33,7 +33,7 @@
         <% urls.forEach((url, index) => { %>
           <tr>
          <td class="td1"><%= index + 1 %></td>
-         <td class="td2"><a target="_blank" href="https://<%= locals.host %>:<%= locals.port %>/url/<%= url.shortID %>"><%= url.shortID %></a></td>
+         <td class="td2"><a target="_blank" href="https://<%= locals.host %>/url/<%= url.shortID %>"><%= url.shortID %></a></td>
          <td class="td3"><a target="_blank" href="<%= url.redirectURL %>"><%= url.redirectURL %></a></td>
          <td class="td4"><%= url.visitHistory.length %></td>
           </tr>
