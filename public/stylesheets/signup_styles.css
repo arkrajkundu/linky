@@ -89,6 +89,10 @@ body {
   text-decoration: none;
 }
 
+.signup-container h1 span {
+  color: rgba(87, 25, 222, 255);
+}
+
 @media (max-width: 600px) {
   .signup-container {
     padding: 15px;

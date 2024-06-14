@@ -89,6 +89,10 @@ body {
   text-decoration: none;
 }
 
+.login-container h1 span {
+  color: rgba(87, 25, 222, 255);
+}
+
 @media (max-width: 600px) {
   .login-container {
     padding: 15px;
