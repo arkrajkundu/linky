@@ -30,10 +30,10 @@ app.use('/url', restrictTo(['NORMAL']), urlRoute);
 app.use('/user', userRoute);
 
 app.get('/url/:shortID', async (req, res) => {
-  const short_ID = req.params.shortID;
+  const shortID = req.params.shortID;
   const entry = await URL.findOneAndUpdate(
     {
-      short_ID,
+      shortID,
     },
     {
       $push: {
